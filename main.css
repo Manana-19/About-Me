@@ -1,0 +1,65 @@
+body {
+    background-image: url('./img/bg.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color:rgb(0.2,0.2,0.2)
+}
+.head2 {
+    color: beige; 
+    margin:auto; 
+    font-size: 48px;
+}
+.intro {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: beige;
+}
+.divintro{
+    width: 70%;
+    margin:64px auto;
+}
+.langList {
+    border: 1px;
+}
+.langList li {
+    position: relative;
+    right: 34px;
+    list-style:inside;
+    margin: 15px 19px;
+    font-size: 24px;
+    color:bisque;
+}
+.langList li a {
+    padding: 14px 14px;
+}
+.contact ul {
+    overflow: auto;
+}
+.contact li {
+    float: left;
+    align-content: center;
+    margin: 15px 20px;
+    background-color: black;
+    list-style: none;
+}
+.contact li button {
+    text-decoration: none;
+    color: bisque;
+    background-color: black;
+    font-size: 15px;
+    margin: auto;
+    padding: 8px 24px;
+}
+.contact li button:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(194, 194, 194);
+    cursor: pointer;
+}
+@media screen and (max-width: 530px) {
+    .intro, .divintro, .langList li {
+        font-size: 12px;
+    }
+    .head2 {
+        font-size: 18px;
+    }
+}
