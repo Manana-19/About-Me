@@ -1,0 +1,357 @@
+
+/* Setting Body with the image properly */
+
+body {
+    background-image: url('./7g5etrge5aty7e985y.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:rgb(0.2,0.2,0.2);
+    margin:0px;
+}
+
+/* Setting Header  "Hello! Allow me to introduce myself..."*/
+
+.head2 {
+    color: beige; 
+    margin:auto; 
+    font-size: 48px;
+}
+
+/* Setting My intro here */
+
+.intro {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: beige;
+}
+
+.divintro{
+    width: 70%;
+    margin:64px auto;
+}
+
+/* Mentioning what language I currently know about */
+
+.langList {
+    border: 1px;
+}
+
+.langList li {
+    position: relative;
+    right: 34px;
+    list-style:inside;
+    margin: 15px 19px;
+    font-size: 24px;
+    color:bisque;
+}
+
+.langList li a {
+    padding: 14px 14px;
+}
+
+/* Managing Social Media's Section */
+
+.social {
+    width: 100%;
+    margin: auto;
+    padding: auto;
+    background-color: rgba(0, 0, 0);
+    position: absolute;
+}
+
+.social h2 {
+    color: bisque;
+    text-decoration: underline bisque;
+    text-align: center;
+}
+
+.socialsList {
+    list-style-type: none;
+    overflow: none;
+    display: flex;
+    justify-content: center;
+}
+
+.socialsList li {
+    float: left;
+    margin: 0px 15px 0px 15px;
+    list-style: none;
+    padding: 15px;
+    display: list-item;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.socialsList li a {
+    text-decoration: none;
+    margin:auto;
+    color: bisque;
+    background-color: rgba(41, 41, 41, 0.45);
+    padding: 10px 30px;
+    border-radius: 23px;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.socialsList li a:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(194, 194, 194);
+    cursor: pointer;
+}
+
+.introdetails > summary {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: beige;
+    cursor: pointer;
+    width: 30%;
+    text-decoration: underline beige;
+}
+
+.introdetails > summary:hover {
+    color: rgb(169, 169, 169);
+}
+
+.introdetails[open] > summary {
+    width: 10%;
+}
+
+.introdetails summary::before {
+    content:'About my qualifications.'
+}
+
+.introdetails[open] summary::before {
+    content:'Close...'
+}
+
+.linkword {
+    text-decoration: underline beige;
+    color:beige
+}
+
+.linkword:hover {
+    color: rgb(147, 147, 147);
+}
+
+summary {
+    list-style: none;
+}
+
+summary::-webkit-details-marker { 
+    display: none; 
+}
+
+/* Setting My navbar here */
+
+.navbar {
+    background-color: rgb(0, 0, 0, 0.3);
+    width: 100%;
+    position: fixed;
+    top:0;
+    overflow: auto;
+}
+
+.navbar ul {
+    overflow: hidden;
+}
+
+.navbar li {
+    float: left;
+    list-style: none;
+    padding: 10px 30px;
+}
+
+.element {
+    padding: 12px 40px;
+    text-decoration: none;
+    background-color: rgb(22, 22, 22);
+    color:white;
+    border-radius: 13px;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.element:hover {
+    color:grey;
+    background-color: rgb(61, 61, 61);
+}
+
+.active {
+    padding: 12px 40px;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    border-radius: 13px;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.active:hover {
+    background-color: black;
+    color: white;
+}
+
+.formclass {
+    display: flex;
+    margin: 105px auto;
+    position: absolute;
+    top: 100;
+    width: 50%;
+    right: 50;
+    left: 50;
+    align-content:center;
+}
+
+.formTitle {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    color: beige;
+    padding: auto;
+    margin: 100px 12px;
+    left:20%;
+    font-size: 33px;
+    text-decoration: underline white;
+}
+
+.errorClass {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    color: rgb(223, 8, 8);
+    padding: auto;
+    margin: 100px 12px;
+    left:20%;
+    font-size: 20px;
+    background-color: rgba(255,0,0,0.2);
+    animation-name: errorAnimation;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+/* Form Input settings */
+
+input[type=text], input[type=email] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0px;
+    border: none;
+    border-bottom: black;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(169, 169, 169);
+    border-radius: 90px;
+    font-size: 14px;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+textarea {
+    box-sizing: border-box;
+    margin: 0px;
+    height: auto;
+    padding: auto;
+    border: none;
+    border-bottom: black;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgb(169, 169, 169);
+    font-size: 14px;
+    resize: none;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+input[type=text]:focus, input[type=email]:focus {
+    border: none;
+    color: white;
+    background-color: rgb(0, 0, 0, 0.6);
+}
+
+textarea:focus {
+    background-color: black;
+    color: white;
+}
+
+input[type=submit] {
+    background-color: rgb(0, 0, 0, 0.3);
+    text-decoration: none;
+    padding: 12px 60px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: black;
+    color: beige;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(194, 194, 194, 0.850);
+    color:black;
+}
+
+/* If the device is small as Manvi */
+
+@media screen and (max-width: 650px) {
+    .intro, .divintro, .langList li {
+        font-size: 12px;
+    }
+    .head2 {
+        font-size: 18px;
+    }
+    .element, .active {
+        padding: 3px 10px;
+    }
+    .navbar li {
+        padding: 2px 6px;
+    }
+    input[type=text], input[type=email] {
+        font-size: 10px;
+    }
+    textarea {
+        max-width: fit-content;
+        width:100%
+    }
+    .social h2 {
+        font-size: 18px;
+    }
+    .socialsList li {
+        margin: 4px;
+        left:3%;
+    }
+    .socialsList li a {
+        padding: 5px 3px;
+    }
+    .buttonSection {
+        padding: 15px 0px;
+    }
+    .formTitle {
+        font-size: 12px;
+        left:10%;
+    }
+    .introdetails > summary {
+        font-size: 12px;
+    }
+}
+
+@keyframes errorAnimation {
+    from {
+        background-color: rgba(255,0,0,0.2);
+        color: rgb(223, 8, 8);
+
+    }
+    to {
+        background-color: rgba(255,0,0,0);
+        color: rgba(223, 8, 8, 0);
+    }
+    100% {
+        display: none;
+    }
+}

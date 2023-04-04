@@ -1,0 +1,67 @@
+//- Using HTML Code for easiness
+html(lang="en")
+    //- Setting Head
+    head
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>#{title}</title>
+
+        //- Using Pug code for including CSS
+        style 
+            include ../src/main.css
+        
+    body
+        header(class="navbar")
+            ul
+                li: a(href="/" class="active") Home
+                li: a(href="#socials" class="element") Social Media
+                li: a(href="/contact" class="element") Contacts
+        
+        section 
+            div(class="divintro")
+                h2(class="head2")
+                    |   Welcome! Allow me to Introduce myself.
+                hr
+                p(class='intro')
+                    |   My name is 
+                    u Manan Jerath
+                    |. I am 17 years old, living in India currently and I aspire to become a software developer.
+                    br
+                    details(class='introdetails')
+                        summary
+                        p(class='intro') 
+                            |   I recently gave my 
+                            a(href='https://en.wikipedia.org/wiki/Central_Board_of_Secondary_Education' class='linkword') CBSE Boards 
+                            |   Exams during 
+                            b Feb-Mar 2023
+                            |   of Class 12 of session 
+                            b 2022-2023
+                            | . Right now, I am preparing for my Entrance Exams so, that I can be eligible to apply for a university.
+
+                p(class='intro')
+                    |   I have basic knowledge of the following languages (I am still on my way to Learn their frameworks):-
+                    hr
+                    ul(class='langlist')
+                        li Python 
+                        li Javascript 
+                        li CSS & HTML
+                    br
+                    br
+                hr
+                p(class='intro') 
+                    |   And about databases I use in my project:-
+                    ul(class='langlist')
+                        li SQL
+                        li MongoDB
+                hr
+                p(class='intro')
+                    |   I am currently working on my programming skills so I may update this website every once in a while...
+        div(class='social')
+            h2 I am Available on these Social Media platforms. 
+            br
+            br
+            div(class='buttonSection' id='socials')
+                ul(class="socialsList")
+                    li: a(target="_blank" href="https://discord.com/users/321638481803739147") Discord
+                    li: a(target="_blank" href="https://github.com/Manana-19") Github
+                    li: a(target="_blank" href="https://twitter.com/MananJerath") Twitter

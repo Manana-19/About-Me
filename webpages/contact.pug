@@ -1,0 +1,51 @@
+//- Using HTML Code for easiness
+<html lang="en">
+    //- Setting Head
+    head 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>#{title}</title>
+        //- Using Pug code for including CSS
+        style 
+            include ../src/main.css
+
+
+    body 
+        <header class="navbar">
+            <ul>
+                <li><a href="/" class="element">Home</a></li>
+                <li><a href="/contact" class="active">Contacts</a></li>
+            </ul>
+        </header>
+
+        if (success=='false')
+
+            h1(class='formTitle') You can send me your message through this form!
+            
+            br
+            br
+            if (error=='true')
+                h3(class='errorClass') Message should contain at least 10 characters. 
+            br
+            br
+            div(class='formclass')
+
+                form(action="/contact", method="POST",autocomplete="off")
+
+                    input(type="text", name="name", placeholder='Name',required)
+                    br
+                    br
+                    br
+                    input(type="email", name="mail", placeholder='Mail (In case I contact you back)')
+                    br
+                    br
+                    br
+                    textarea(name="message", cols="70", rows="10", maxlength='2048') 
+                    br
+                    br
+                    br
+                    input(type="submit", value="Send")
+
+        else if (success=='true')
+            div(class='formTitle') #{content}
+            br
