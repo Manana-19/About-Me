@@ -3,9 +3,9 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const formScript = require('./formSave.js');
-const counterSchema = require('./models/counterSchema.js');
-const formSchema = require('./models/formSchema.js');
+const formScript = require('./scripts/formSave.js');
+const counterSchema = require('./scripts/models/counterSchema.js');
+const formSchema = require('./scripts/models/formSchema.js');
 const {Client, GatewayIntentBits, Events, EmbedBuilder} = require('discord.js');
 const {body, validationResult} = require('express-validator');
 require('dotenv').config();
@@ -18,7 +18,7 @@ app.use(express.static('./src'));
 app.use(express.urlencoded());
 
 app.set('view engine', 'pug');
-app.set('views', path.join(__dirname, '../webpages'));
+app.set('views', path.join(__dirname, './webpages'));
 
 // Setting Discord Client
 const client = new Client({
