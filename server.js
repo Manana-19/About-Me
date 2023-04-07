@@ -14,7 +14,8 @@ const port = 80; // Just setting the port here....
 
 
 // Configuring Express related stuff here
-app.use(express.static('./src'));
+// app.use(express.static('src'));
+app.use(express.static(path.join(__dirname,'/src')));
 app.use(express.urlencoded());
 
 app.set('view engine', 'pug');
